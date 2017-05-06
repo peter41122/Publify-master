@@ -1,0 +1,19 @@
+---
+pt-BR:
+  authors_sidebar:
+    content:
+      authors: Autores
+  notes_sidebar:
+    content:
+      view_on_twitter: Ver no Twitter
+  popular_sidebar:
+    content:
+      comments: Comentários
+      nothing_to_show_yet: Nada a exibir no momento
+  xml_sidebar:
+    content:
+      articles: Artigos
+      comments: Comentários
+      syndicate: Sindicato
+      tag: Tag
+      trackbacks: Trackbacks

@@ -1,0 +1,103 @@
+# Default style guide 'https://github.com/bbatsov/ruby-style-guide'.
+
+AllCops:
+  Exclude:
+  - 'bin/**/*'
+  - 'config/**/*'
+  - 'db/**/*'
+  - 'tmp/**/*'
+  - 'publify_core/**/*'
+  - 'publify_amazon_sidebar/**/*'
+  - 'publify_textfilter_code/**/*'
+
+Rails:
+  Enabled: true
+
+# We have duplication due to extra logic in the Gemfile
+Bundler/DuplicatedGem:
+  Enabled: false
+
+# Allow if (foo = get_foo) style
+Lint/AssignmentInCondition:
+  AllowSafeAssignment: true
+
+# Blocks in specs can have any length
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+# Do not require long paths to be split by comma's.
+Rails/FilePath:
+  Enabled: false
+
+# Documenting all classes is not common in Rails projects.
+Style/Documentation:
+  Enabled: false
+
+# Provides more information, while still being displayable in modern wide-screen.
+# TODO: Re-enable once linelength has been fixed everywhere.
+# Metrics/LineLength:
+#   Max: 120
+
+# Allow the use of 'and' 'or' in control structures.
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+# Allow multiple Hash parameters to look similar
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/CollectionMethods:
+  Enabled: true
+
+# Place . on the previous line
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+# This cop doesn't detect use of break yet
+Style/EachWithObject:
+  Enabled: false
+
+# Do not use unnecessary spacing.
+Style/ExtraSpacing:
+  Enabled: true
+
+# Allows format strings with: format, sprintf or percent.
+Style/FormatString:
+  Enabled: false
+
+# TODO: Re-enable and fix offenses
+Style/GuardClause:
+  Enabled: false
+
+# Multi-line operations should be simply indented. Aligning them makes it even
+# harder to keep a sane line length.
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+# Multi-line operations should be simply indented. Aligning them makes it even
+# harder to keep a sane line length.
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+# Restore previous RuboCop defaults
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%W': ()
+    '%w': ()
+
+# Always use raise to raise exceptions
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+# Allow meaningful names for single-line reduce etc.
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+inherit_from: .rubocop_todo.yml
